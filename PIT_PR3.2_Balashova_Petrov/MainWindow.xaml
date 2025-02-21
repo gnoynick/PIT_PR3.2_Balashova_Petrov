@@ -20,8 +20,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBox Name="Operand1" Grid.Column="0" Grid.Row="0" Margin="6,17,14,3" FontSize="16" FontFamily="Times New Roman" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <TextBox Name="Operand2" Grid.Column="0" Grid.Row="1" Margin="7,19,13,6" FontSize="16" FontFamily="Times New Roman" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Operand1" Grid.Column="0" Grid.Row="0" Margin="6,17,14,3" FontSize="16" FontFamily="Times New Roman" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" />
+        <TextBox Name="Operand2" Grid.Column="0" Grid.Row="1" Margin="7,19,13,6" FontSize="16" FontFamily="Times New Roman" TextAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput"/>
         <Label Content="Операнд 1" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-5,0,0" FontFamily="Times New Roman" FontSize="14" />
         <Label Content="Операнд 2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,47,0,0" Grid.RowSpan="2" FontFamily="Times New Roman" FontSize="14" />
 

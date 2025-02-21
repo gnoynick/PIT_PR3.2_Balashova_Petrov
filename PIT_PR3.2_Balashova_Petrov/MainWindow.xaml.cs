@@ -22,7 +22,7 @@ namespace PIT_PR3._2_Balashova_Petrov
         {
             InitializeComponent();
             ClearInputs();
-            Closing += new CancelEventHandler(MainWindow_Closing); // Подключаем обработчик закрытия окна
+            Closing += new CancelEventHandler(MainWindow_Closing); 
         }
 
         private void ClearInputs()
@@ -84,6 +84,19 @@ namespace PIT_PR3._2_Balashova_Petrov
 
             ResultBox.Text = result.ToString();
         }
+
+        private void TextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, 0) && e.Text != ",")
+            {
+                e.Handled = true;
+            }
+            if (e.Text == "," && (sender as TextBox).Text.Contains(","))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         private void MainWindow_Closing(object sender, CancelEventArgs e)
         {
