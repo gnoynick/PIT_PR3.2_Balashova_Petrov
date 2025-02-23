@@ -87,11 +87,15 @@ namespace PIT_PR3._2_Balashova_Petrov
 
         private void TextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
-            if (!char.IsDigit(e.Text, 0) && e.Text != ",")
+            if (!char.IsDigit(e.Text, 0) && e.Text != "-" && e.Text != ",")
             {
                 e.Handled = true;
             }
-            if (e.Text == "," && (sender as TextBox).Text.Contains(","))
+            if (e.Text == "-" && ((sender as TextBox).Text.Contains("-") || (sender as TextBox).Text.Length > 0))
+            {
+                e.Handled = true;
+            }
+            if (e.Text == "," && ((sender as TextBox).Text.Contains(",") || (sender as TextBox).Text.Length == 0))
             {
                 e.Handled = true;
             }
